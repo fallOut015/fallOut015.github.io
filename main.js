@@ -1,5 +1,3 @@
 JarOfCookies = {};
 
-JarOfCookies.load = () => {
-  alert("Loaded JarOfCookies without error.")
-}
+Game.NewUpgradeCookie({ name : 'name', desc : 'desc', icon : [4,4], power : 2, price : 1 });
