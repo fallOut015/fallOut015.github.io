@@ -36,3 +36,5 @@ Game.Win("Third-party")
 
 Game.NewUpgradeCookie({ name : "Thumbprint cookies", desc : "Also known as Hallengrotta. You've Hallen<b>gotta</b> try 'em! <br/> Get it?", icon : [2, 3, icons], power : 4, price : 99999999999999999999*5 })
 Game.NewUpgradeCookie({ name : "Lava cookies", desc : "Hopefully not real lava.<br/>Right?", icon : [1, 3, icons], power : 2, price : 999999999999*5 })
+Game.NewUpgradeCookie({ name : "Those Pillsbury cookies with the christmas tree", desc : "I hope I'm not the only one with a childlike fondness for these. They have a certain... texture.", icon : [3, 3, icons], power : 4, price : 999999999999999999999999999999 })
+Game.NewUpgradeCookie({ name : "Donut cookies", desc : "You're not sure how to feel about these. Something about it feels wrong.<br/>On the other hand, it's two treats in one! Best of both worlds!", icon : [1, 4, icons], power : 4, price : 9999999999999999999999999999999999 })
