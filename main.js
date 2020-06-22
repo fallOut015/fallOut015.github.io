@@ -44,6 +44,24 @@ Game.NewUpgradeCookie({ name : "Brookies", desc : "It's like a soft brownie and 
 Game.NewUpgradeCookie({ name : "Crownies", desc : "Wait, these actually exist?", icon : [3, 4, icons], power : 1, price : getCookiePrice(11) })
 Game.NewUpgradeCookie({ name : "Ultimate cookies", desc : "These have have the super high-school level talent of being the ultimate cookies. At first glance they appear normal, but at first bite you know better.", icon : [10, 0], power : 1, price : getCookiePrice(20) })
 
+new Game.Achievement("Ascended", "Purchase every prestige upgrade." , [12, 0])
+let everyPrestige = () => {
+	let prestigeupgradesowned = 0
+	let prestigeupgradestotal = 0
+	for (var i in Game.Upgrades) {
+		if(Game.Upgrades[i].pool == "Prestige") {
+			++ prestigeupgradestotal
+			if(Game.Upgrades[i].bought) {
+				++ prestigeupgradesowned
+			}
+		}
+	}
+	if(prestigeupgradesowned == prestigeupgradestotal) {
+		Game.Win("Ascended")
+	}
+}
+Game.customChecks.push(everyPrestige)
+
 // sandwich cookie
 // other pillsbury cookies
 // sans cookie (people wanted these, for some reason)
