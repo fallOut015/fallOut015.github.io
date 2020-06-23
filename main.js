@@ -51,16 +51,10 @@ let everyPrestige = () => {
 	for (var i in Game.Upgrades) {
 		if(Game.Upgrades[i].pool == "prestige") {
 			++ prestigeupgradestotal
-			if(Game.Upgrades[i].bought) {
-				++ prestigeupgradesowned
-			}
+			if(Game.Upgrades[i].bought) ++ prestigeupgradesowned
 		}
 	}
-	console.log("owned: " + prestigeupgradesowned)
-	console.log("total: " + prestigeupgradestotal)
-	if(prestigeupgradesowned == prestigeupgradestotal) {
-		Game.Win("Ascended")
-	}
+	if(prestigeupgradesowned == prestigeupgradestotal) Game.Win("Ascended")
 }
 Game.customChecks.push(everyPrestige)
 
