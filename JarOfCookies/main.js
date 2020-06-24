@@ -28,7 +28,7 @@ JarOfCookies.LoadSave()
 Game.customSave.push(JarOfCookies.WriteSave)
 Game.customLoad.push(JarOfCookies.LoadSave)
 
-let icons = "https://fallout015.github.io/icons.png"
+let icons = "https://fallout015.github.io/JarOfCookies/icons.png"
 
 alert("Loading Jar of Cookies")
 
