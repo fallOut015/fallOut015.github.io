@@ -40,8 +40,8 @@ body div#banner {
 	width: calc(100% + 12pt);
 	font-family: oswald-extra-light;
 	font-size: 24pt;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 	margin: auto;
 	left: -6pt;
 	margin-top: 0;
@@ -61,12 +61,14 @@ body div#banner p {
 	position: relative;
 	padding: 2.5%;
 	border-radius: 10pt;
+	font-family: serif;
 }
 
-body div#banner a img {
-	width:5%;
-	height:5%;
-	filter:brightness(100%) saturate(0);
+body div#banner a img.link {
+	height:24pt;
+	filter:grayscale(100%);
+	position: relative;
+	top:5pt
 }
 
 body article.mod {
@@ -96,9 +98,33 @@ body article.mod.expanded {
 	content: none;
 }*/
 
-body article.mod img.icon {
+body article.mod img {
 	width: 50%;
 	float: left;
+	display: block;
+}
+body article.mod img.slideshow {
+	display:none;
+}
+body article.mod button.controls {
+	border:none;
+	background:none;
+	filter: drop-shadow(0 1pt 2pt rgba(0, 0, 0, 0.25));
+	position: absolute;
+	display:none;
+}
+body article.mod button.controls.left {
+	transform: rotateZ(180deg);
+	top:40%;
+	left:-5%;
+}
+body article.mod button.controls.right {
+	top:40%;
+	right:45%;
+}
+body article.mod button.controls.fullscreen {
+	bottom:-1.5%;
+	right:45%;
 }
 body article img.widget {
 	width:10%;
@@ -107,6 +133,7 @@ body article img.widget {
 	position: absolute;
 	bottom:8%;
 	cursor: pointer;
+	display: block;
 }
 body article.mod a img.widget.download {
 	left:54%;
@@ -130,6 +157,9 @@ body article.mod p {
 	position: relative;
 	left: 16pt;
 	width: 95%;
+}
+body article.mod p.desc {
+	display: none;
 }
 
 
